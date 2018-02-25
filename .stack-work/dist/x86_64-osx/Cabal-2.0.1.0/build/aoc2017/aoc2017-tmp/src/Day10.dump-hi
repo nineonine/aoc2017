@@ -1,0 +1,163 @@
+
+==================== FINAL INTERFACE ====================
+2018-02-02 05:04:33.230452 UTC
+
+interface main:Day10 8022
+  interface hash: 847d47c6a2981cf16340dc4e885cac8d
+  ABI hash: c1a485def4f73ae797c34246337a36f4
+  export-list hash: e3e4caea47c2aed56c0d8cf002f6fd03
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 1d97cfaaa3d80020d50ba221b1558fc2
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Day10.mkHash
+module dependencies:
+package dependencies: base-4.10.1.0 ghc-prim-0.5.1.1
+                      integer-gmp-1.0.1.0
+orphans: base-4.10.1.0:GHC.Float base-4.10.1.0:GHC.Base
+family instance modules: base-4.10.1.0:Control.Applicative
+                         base-4.10.1.0:Data.Either base-4.10.1.0:Data.Functor.Const
+                         base-4.10.1.0:Data.Functor.Identity base-4.10.1.0:Data.Monoid
+                         base-4.10.1.0:Data.Type.Equality base-4.10.1.0:GHC.Generics
+                         base-4.10.1.0:GHC.IO.Exception base-4.10.1.0:GHC.TypeLits
+                         base-4.10.1.0:GHC.TypeNats
+import  -/  base-4.10.1.0:Data.Bits e0790a03e1e51e2d053ee3f563937f85
+import  -/  base-4.10.1.0:Data.Char fe4e3458190deeac19969ce15e33bed9
+import  -/  base-4.10.1.0:Data.Foldable 9ed87455d68e87ff2b5b8725eae9897e
+import  -/  base-4.10.1.0:Debug.Trace d6b92a67d41f66511d3d35c0713fec79
+import  -/  base-4.10.1.0:GHC.Base 782fd99b5e36f3698a26179a49afca64
+import  -/  base-4.10.1.0:GHC.Enum 5a1ba50c23f92f669e01f8955f202337
+import  -/  base-4.10.1.0:GHC.List e3060fbeb44ce0038e6b4dedf2dd9cf1
+import  -/  base-4.10.1.0:GHC.Num 6e1dc5d36d99a802edb39b92bb1923b8
+import  -/  base-4.10.1.0:Numeric 21156732c42fc141a3fb4d889dca2ac6
+import  -/  base-4.10.1.0:Prelude 31945b7d0084063347fc52506d3a4020
+40e2927e701a7e57d258edeb4a481adc
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Day10.$trModule3 Day10.$trModule1) -}
+311558414ee4a278860bf4dbc0e7f06d
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day10.$trModule2) -}
+c7cdc0328d1eb10c53104c60e9f39885
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Day10"#) -}
+44c65d3c44088d383d61e4ff79ff0662
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day10.$trModule4) -}
+12cf9bdc0cf9b8ce28c6def58fba43e3
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("main"#) -}
+9779ee92c44dda2f28656c484e40f94f
+  $wgo ::
+    [GHC.Types.Int]
+    -> Day10.Position
+    -> GHC.Types.Int
+    -> [Day10.Length]
+    -> (# [GHC.Types.Int], Day10.Position, GHC.Types.Int #)
+  {- Arity: 4, Strictness: <L,U><L,U(U)><L,U(U)><S,1*U>,
+     Inline: [0] -}
+04a87b09ccca9d3e61ab0ce5332e5cbb
+  $wgo1 ::
+    GHC.Prim.Int#
+    -> GHC.Prim.Int# -> (# GHC.Types.Int, [GHC.Types.Int] #)
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,U><S,1*U>, Inline: [0] -}
+73d453bb3e5c4b6a315bb53f3a1fd372
+  type Length = GHC.Types.Int
+cf31748c362f3dc0fca07fd48de00c1e
+  type Position = GHC.Types.Int
+fdbe00435339d05213d067fe759e9ec2
+  type SkipSize = GHC.Types.Int
+01c35dcf98cdc325a93f9f062745574b
+  initList :: [GHC.Types.Int]
+  {- Unfolding: (case Day10.$wgo1 0# 256# of ww { (#,#) ww1 ww2 ->
+                 GHC.Types.: @ GHC.Types.Int ww1 ww2 }) -}
+4d93de64349f946db901edd56cafdde5
+  mkHash :: GHC.Base.String -> GHC.Base.String
+  {- Arity: 1, Strictness: <L,1*U>,
+     Unfolding: (\ (s :: GHC.Base.String) ->
+                 let {
+                   input :: [GHC.Types.Int] = Day10.mkHash_go2 s
+                 } in
+                 let {
+                   ds :: ([GHC.Types.Int], Day10.Position, Day10.SkipSize)
+                   = case Day10.mkHash_$s$wgo
+                            input
+                            0#
+                            0#
+                            Day10.initList of ww { (#,,#) ww1 ww2 ww3 ->
+                     (ww1, ww2, ww3) }
+                 } in
+                 letrec {
+                   go :: GHC.Integer.Type.Integer
+                         -> [GHC.Types.Int]
+                         -> Day10.Position
+                         -> Day10.SkipSize
+                         -> [GHC.Types.Char]
+                     <join 4> {- Arity: 4, Strictness: <S,U><L,U><L,U(U)><L,U(U)> -}
+                   = \ (ds1 :: GHC.Integer.Type.Integer)
+                       (l :: [GHC.Types.Int])
+                       (ds2 :: Day10.Position)
+                       (ds3 :: Day10.SkipSize) ->
+                     case GHC.Integer.Type.eqInteger#
+                            ds1
+                            Day10.mkHash2 of wild { DEFAULT ->
+                     case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild of wild1 {
+                       GHC.Types.False
+                       -> let {
+                            ds4 :: ([GHC.Types.Int], Day10.Position, Day10.SkipSize)
+                            = case Day10.$wgo l ds2 ds3 input of ww { (#,,#) ww1 ww2 ww3 ->
+                              (ww1, ww2, ww3) }
+                          } in
+                          go
+                            (GHC.Integer.Type.minusInteger ds1 GHC.Enum.$fEnumInteger1)
+                            (case ds4 of wild2 { (,,) l' p' s' -> l' })
+                            (case ds4 of wild2 { (,,) l' p' s' -> p' })
+                            (case ds4 of wild2 { (,,) l' p' s' -> s' })
+                       GHC.Types.True -> Day10.mkHash_go1 (Day10.mkHash_go l) } }
+                 } in
+                 go
+                   Day10.mkHash1
+                   (case ds of wild { (,,) l' p s1 -> l' })
+                   (case ds of wild { (,,) l' p s1 -> p })
+                   (case ds of wild { (,,) l' p s1 -> s1 })) -}
+8e647a1aabdac7aee2c011975e998556
+  mkHash1 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (63) -}
+a0322de8f3e5ccf1dc96ec5f477e8d70
+  mkHash2 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (0) -}
+9c585f122eaff19194efc90489dca5b6
+  mkHash_$s$wgo ::
+    [GHC.Types.Int]
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> [GHC.Types.Int]
+    -> (# [GHC.Types.Int], Day10.Position, GHC.Types.Int #)
+  {- Arity: 4, Strictness: <S,1*U><L,U><L,U><L,U> -}
+d4bbc32023eef2dacaab4f9baec7d211
+  mkHash_go :: [GHC.Types.Int] -> [GHC.Types.Int]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
+842f9607b1c8486593e9435dce6cf78d
+  mkHash_go1 :: [GHC.Types.Int] -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <S,1*U> -}
+bbff6d4fc8bfc2ec666726e16043e285
+  mkHash_go2 :: [GHC.Types.Char] -> [GHC.Types.Int]
+  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U>m2 -}
+"SC:$wgo0" [0] forall (sc :: [GHC.Types.Int])
+                      (sc1 :: GHC.Prim.Int#)
+                      (sc2 :: GHC.Prim.Int#)
+                      (sc3 :: [GHC.Types.Int])
+  Day10.$wgo sc3 (GHC.Types.I# sc2) (GHC.Types.I# sc1) sc
+  = Day10.mkHash_$s$wgo sc sc1 sc2 sc3
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+

@@ -1,0 +1,113 @@
+	Thu Feb  1 21:48 2018 Time and Allocation Profiling Report  (Final)
+
+	   aoc2017 +RTS -p -s -RTS
+
+	total time  =        2.17 secs   (2173 ticks @ 1000 us, 1 processor)
+	total alloc = 7,826,504,424 bytes  (excludes profiling overheads)
+
+COST CENTRE MODULE SRC                          %time %alloc
+
+appendBack  Day10  src/Day10.hs:(32,1)-(33,75)   43.6   55.2
+splitter.go Day10  src/Day10.hs:(28,3)-(29,40)   20.7   20.1
+splitter    Day10  src/Day10.hs:(25,1)-(29,40)   19.6   24.3
+nP          Day10  src/Day10.hs:37:1-55          14.0    0.0
+
+
+                                                                                                        individual      inherited
+COST CENTRE                        MODULE                SRC                         no.     entries  %time %alloc   %time %alloc
+
+MAIN                               MAIN                  <built-in>                  153          0    0.0    0.0   100.0  100.0
+ CAF                               GHC.Conc.Signal       <entire-module>             245          0    0.0    0.0     0.0    0.0
+ CAF                               GHC.IO.Encoding       <entire-module>             228          0    0.0    0.0     0.0    0.0
+ CAF                               GHC.IO.Encoding.Iconv <entire-module>             226          0    0.0    0.0     0.0    0.0
+ CAF                               GHC.IO.Handle.FD      <entire-module>             217          0    0.0    0.0     0.0    0.0
+ CAF                               GHC.IO.Handle.Text    <entire-module>             215          0    0.0    0.0     0.0    0.0
+ CAF:answer1                       Day14                 src/Day14.hs:38:1-7         275          0    0.0    0.0     0.0    0.0
+  answer1                          Day14                 src/Day14.hs:38:1-31        309          1    0.0    0.0     0.0    0.0
+   solve1                          Day14                 src/Day14.hs:36:1-37        310          1    0.0    0.0     0.0    0.0
+ CAF:answer3                       Day14                 <no location info>          274          0    0.0    0.0     0.4    0.1
+  answer1                          Day14                 src/Day14.hs:38:1-31        311          0    0.0    0.0     0.4    0.1
+   solve1                          Day14                 src/Day14.hs:36:1-37        312          0    0.0    0.0     0.4    0.1
+    countOnes                      Day14                 src/Day14.hs:(24,1)-(31,21) 317          0    0.0    0.0     0.4    0.1
+     countOnes.step                Day14                 src/Day14.hs:(25,3)-(31,21) 374       4096    0.0    0.0     0.4    0.1
+      countOnes.step.count'        Day14                 src/Day14.hs:(26,5)-(31,21) 375       4096    0.0    0.0     0.4    0.1
+       countOnes.step.count'.(...) Day14                 src/Day14.hs:29:9-38        377       4096    0.1    0.0     0.1    0.0
+       countOnes.step.count'._1s   Day14                 src/Day14.hs:28:9-39        383       4096    0.0    0.0     0.0    0.0
+       countOnes.step.count'.bin   Day14                 src/Day14.hs:30:9-53        376       4096    0.2    0.0     0.2    0.0
+       countOnes.step.count'.num   Day14                 src/Day14.hs:29:9-38        382       4096    0.0    0.0     0.0    0.0
+ CAF:answer4                       Day14                 <no location info>          273          0    0.0    0.0    99.4   99.9
+  answer1                          Day14                 src/Day14.hs:38:1-31        313          0    0.0    0.0    99.4   99.9
+   mkGrid                          Day14                 src/Day14.hs:(19,1)-(21,69) 314          1    0.0    0.0    99.4   99.9
+    mkGrid.go                      Day14                 src/Day14.hs:(20,3)-(21,69) 315        129    0.0    0.0    99.4   99.9
+     mkGrid.go.s'                  Day14                 src/Day14.hs:21:18-40       333        128    0.0    0.0     0.0    0.0
+     mkHash                        Day10                 src/Day10.hs:(81,1)-(88,28) 318        128    0.0    0.0    99.4   99.9
+      mkHash.f                     Day10                 src/Day10.hs:(84,5)-(86,19) 370       2048    0.0    0.0     0.2    0.0
+       mkHash.toHexS               Day10                 src/Day10.hs:83:5-27        371       4096    0.2    0.0     0.2    0.0
+      mkHash.denseHash             Day10                 src/Day10.hs:87:5-59        319        128    0.0    0.0    99.2   99.9
+       prepareInput                Day10                 src/Day10.hs:(72,1)-(74,33) 331        128    0.0    0.0     0.0    0.0
+        prepareInput.seqToAdd      Day10                 src/Day10.hs:74:3-33        335        128    0.0    0.0     0.0    0.0
+        prepareInput.toBytes       Day10                 src/Day10.hs:73:3-21        332        128    0.0    0.0     0.0    0.0
+       mkDenseHash                 Day10                 src/Day10.hs:(67,1)-(69,63) 321          0    0.0    0.0     0.3    0.1
+        mkDenseHash.go             Day10                 src/Day10.hs:(68,3)-(69,63) 322       2176    0.1    0.0     0.3    0.1
+         mkDenseHash.go.(...)      Day10                 src/Day10.hs:69:15-38       373       2048    0.2    0.1     0.2    0.1
+         mkDenseHash.go.fs         Day10                 src/Day10.hs:69:15-38       372       2048    0.0    0.0     0.0    0.0
+         mkDenseHash.go.ls         Day10                 src/Day10.hs:69:15-38       384       2048    0.0    0.0     0.0    0.0
+       mkSparseHash                Day10                 src/Day10.hs:64:1-22        324          0    0.0    0.0    98.8   99.8
+        round64                    Day10                 src/Day10.hs:(55,1)-(61,29) 325        128    0.0    0.0    98.8   99.8
+         round64.go                Day10                 src/Day10.hs:(57,3)-(61,29) 326       8192    0.0    0.0    97.5   98.3
+          round64.go.(...)         Day10                 src/Day10.hs:60:7-39        328       8064    0.0    0.0    97.5   98.3
+           round'                  Day10                 src/Day10.hs:(40,1)-(48,23) 329       8064    0.0    0.0    97.5   98.3
+            round'.go              Day10                 src/Day10.hs:(41,3)-(48,23) 330     138222    0.2    0.2    97.5   98.3
+             round'.go.l'          Day10                 src/Day10.hs:44:7-40        336     130158    0.5    0.0    83.1   98.1
+              appendBack           Day10                 src/Day10.hs:(32,1)-(33,75) 362     130158   43.0   54.4    43.0   54.4
+              splitter             Day10                 src/Day10.hs:(25,1)-(29,40) 337     130158   19.3   23.9    39.7   43.7
+               splitter.go         Day10                 src/Day10.hs:(28,3)-(29,40) 361    9792701   20.4   19.8    20.4   19.8
+               splitter.\          Day10                 src/Day10.hs:26:30-43       369        536    0.0    0.0     0.0    0.0
+             round'.go.c'          Day10                 src/Day10.hs:45:7-19        363     130030    0.0    0.0    13.9    0.0
+              nP                   Day10                 src/Day10.hs:37:1-55        364     130030   13.9    0.0    13.9    0.0
+             round'.go.s'          Day10                 src/Day10.hs:46:7-17        366     129902    0.2    0.0     0.2    0.0
+          round64.go.l'            Day10                 src/Day10.hs:60:7-39        327       8064    0.0    0.0     0.0    0.0
+          round64.go.p'            Day10                 src/Day10.hs:60:7-39        367       7936    0.0    0.0     0.0    0.0
+          round64.go.s'            Day10                 src/Day10.hs:60:7-39        368       7936    0.0    0.0     0.0    0.0
+         round64.(...)             Day10                 src/Day10.hs:56:3-40        339        128    0.0    0.0     1.3    1.5
+          round'                   Day10                 src/Day10.hs:(40,1)-(48,23) 340        128    0.0    0.0     1.3    1.5
+           round'.go               Day10                 src/Day10.hs:(41,3)-(48,23) 341       2194    0.0    0.0     1.3    1.5
+            round'.go.c'           Day10                 src/Day10.hs:45:7-19        348       2066    0.0    0.0     0.1    0.0
+             nP                    Day10                 src/Day10.hs:37:1-55        349       2066    0.1    0.0     0.1    0.0
+            round'.go.l'           Day10                 src/Day10.hs:44:7-40        342       2066    0.0    0.0     1.2    1.5
+             appendBack            Day10                 src/Day10.hs:(32,1)-(33,75) 347       2066    0.6    0.8     0.6    0.8
+             splitter              Day10                 src/Day10.hs:(25,1)-(29,40) 343       2066    0.3    0.4     0.6    0.7
+              splitter.go          Day10                 src/Day10.hs:(28,3)-(29,40) 354     142490    0.3    0.3     0.3    0.3
+              splitter.\           Day10                 src/Day10.hs:26:30-43       346        141    0.0    0.0     0.0    0.0
+            round'.go.s'           Day10                 src/Day10.hs:46:7-17        359       2066    0.0    0.0     0.0    0.0
+         round64.l'                Day10                 src/Day10.hs:56:3-40        338        128    0.0    0.0     0.0    0.0
+         round64.p                 Day10                 src/Day10.hs:56:3-40        360        128    0.0    0.0     0.0    0.0
+         round64.s                 Day10                 src/Day10.hs:56:3-40        365        128    0.0    0.0     0.0    0.0
+ CAF:countOnes_r36N                Day14                 src/Day14.hs:24:1-9         272          0    0.0    0.0     0.0    0.0
+  countOnes                        Day14                 src/Day14.hs:(24,1)-(31,21) 316          1    0.0    0.0     0.0    0.0
+ CAF:initList                      Day10                 src/Day10.hs:22:1-8         298          0    0.0    0.0     0.0    0.0
+  initList                         Day10                 src/Day10.hs:22:1-29        344          1    0.0    0.0     0.0    0.0
+ CAF:input                         Day14                 src/Day14.hs:16:1-5         269          0    0.0    0.0     0.0    0.0
+  input                            Day14                 src/Day14.hs:16:1-18        334          1    0.0    0.0     0.0    0.0
+ CAF:ls_r4AK                       Day10                 <no location info>          299          0    0.0    0.0     0.0    0.0
+  round'                           Day10                 src/Day10.hs:(40,1)-(48,23) 350          0    0.0    0.0     0.0    0.0
+   round'.go                       Day10                 src/Day10.hs:(41,3)-(48,23) 351          0    0.0    0.0     0.0    0.0
+    round'.go.c'                   Day10                 src/Day10.hs:45:7-19        352          0    0.0    0.0     0.0    0.0
+     nP                            Day10                 src/Day10.hs:37:1-55        353          0    0.0    0.0     0.0    0.0
+ CAF:lvl3_r49h                     Day14                 <no location info>          270          0    0.0    0.0     0.0    0.0
+  countOnes                        Day14                 src/Day14.hs:(24,1)-(31,21) 378          0    0.0    0.0     0.0    0.0
+   countOnes.step                  Day14                 src/Day14.hs:(25,3)-(31,21) 379          0    0.0    0.0     0.0    0.0
+    countOnes.step.count'          Day14                 src/Day14.hs:(26,5)-(31,21) 380          0    0.0    0.0     0.0    0.0
+     countOnes.step.count'.(...)   Day14                 src/Day14.hs:29:9-38        381          0    0.0    0.0     0.0    0.0
+ CAF:main1                         Main                  <no location info>          267          0    0.0    0.0     0.0    0.0
+  main                             Main                  src/Main.hs:(6,1)-(8,16)    306          1    0.0    0.0     0.0    0.0
+ CAF:main2                         Main                  <no location info>          265          0    0.0    0.0     0.0    0.0
+ CAF:main4                         Main                  <no location info>          266          0    0.0    0.0     0.0    0.0
+  main                             Main                  src/Main.hs:(6,1)-(8,16)    308          0    0.0    0.0     0.0    0.0
+ CAF:maxOfEl                       Day10                 src/Day10.hs:16:1-7         297          0    0.0    0.0     0.0    0.0
+  maxOfEl                          Day10                 src/Day10.hs:16:1-13        345          1    0.0    0.0     0.0    0.0
+ CAF:mkDenseHash                   Day10                 src/Day10.hs:67:1-11        305          0    0.0    0.0     0.0    0.0
+  mkDenseHash                      Day10                 src/Day10.hs:(67,1)-(69,63) 320          1    0.0    0.0     0.0    0.0
+ CAF:mkSparseHash                  Day10                 src/Day10.hs:64:1-12        304          0    0.0    0.0     0.0    0.0
+  mkSparseHash                     Day10                 src/Day10.hs:64:1-22        323          1    0.0    0.0     0.0    0.0
+ main                              Main                  src/Main.hs:(6,1)-(8,16)    307          0    0.1    0.0     0.1    0.0

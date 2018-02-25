@@ -1,0 +1,356 @@
+
+==================== FINAL INTERFACE ====================
+2018-02-02 05:04:33.53624 UTC
+
+interface main:Day13 8022
+  interface hash: e49ec4067767cba0a8da49d4d34d721d
+  ABI hash: ff0da50e3cec0eedef33b019aaf3a701
+  export-list hash: ece3fc777d5890bee63b0d0094261e7a
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: e7af8243bd7f844cfefbc46b59f6bf9c
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Day13.answer1
+  Day13.answer2
+module dependencies:
+package dependencies: base-4.10.1.0* ghc-prim-0.5.1.1
+                      integer-gmp-1.0.1.0
+orphans: base-4.10.1.0:GHC.Float base-4.10.1.0:GHC.Base
+family instance modules: base-4.10.1.0:Control.Applicative
+                         base-4.10.1.0:Data.Either base-4.10.1.0:Data.Functor.Const
+                         base-4.10.1.0:Data.Functor.Identity base-4.10.1.0:Data.Monoid
+                         base-4.10.1.0:Data.Type.Equality base-4.10.1.0:GHC.Generics
+                         base-4.10.1.0:GHC.IO.Exception base-4.10.1.0:GHC.TypeLits
+                         base-4.10.1.0:GHC.TypeNats
+import  -/  base-4.10.1.0:Data.Foldable 9ed87455d68e87ff2b5b8725eae9897e
+import  -/  base-4.10.1.0:Data.Functor 2ffda4f936b8f474394d93205750aff3
+import  -/  base-4.10.1.0:Data.OldList 555420b092ca8cf0a8f9666bc0e07dcf
+import  -/  base-4.10.1.0:Data.Tuple 8fa1305aa5032ea35e2a54fa5f1e78f9
+import  -/  base-4.10.1.0:GHC.Base 782fd99b5e36f3698a26179a49afca64
+import  -/  base-4.10.1.0:GHC.Enum 5a1ba50c23f92f669e01f8955f202337
+import  -/  base-4.10.1.0:GHC.List e3060fbeb44ce0038e6b4dedf2dd9cf1
+import  -/  base-4.10.1.0:GHC.Num 6e1dc5d36d99a802edb39b92bb1923b8
+import  -/  base-4.10.1.0:GHC.Real 3c62834bc25e762eabc44149c4cc142d
+import  -/  base-4.10.1.0:GHC.Show 0a8ce2b5e533d1c2cfb7954e6736be45
+import  -/  base-4.10.1.0:Prelude 31945b7d0084063347fc52506d3a4020
+import  -/  base-4.10.1.0:System.IO 525805ab19df5e4fe6d8de7dde9cb909
+import  -/  base-4.10.1.0:Text.Read 9e862e012b3c71e83cb56fb456188f44
+import  -/  ghc-prim-0.5.1.1:GHC.Classes 93e2660065dce9329577e83d76d8f0d4
+import  -/  ghc-prim-0.5.1.1:GHC.Types b1fd0716441595db508c1a74387bf394
+410c219f0a01017fc4ca5bc0f6ff8cba
+  $fShowLayer :: GHC.Show.Show Day13.Layer
+  DFunId
+  {- Strictness: m, Inline: CONLIKE,
+     Unfolding: DFun:.
+                  @ Day13.Layer
+                  Day13.$fShowLayer_$cshowsPrec
+                  Day13.$fShowLayer_$cshow
+                  Day13.$fShowLayer_$cshowList -}
+410c219f0a01017fc4ca5bc0f6ff8cba
+  $fShowLayer1 :: Day13.Layer -> GHC.Show.ShowS
+  {- Arity: 2, Strictness: <S(SS),1*U(U,U)><L,U>,
+     Unfolding: (\ (w :: Day13.Layer) (w1 :: GHC.Base.String) ->
+                 case w of ww { Day13.L ww1 ww2 ->
+                 Day13.$w$cshowsPrec 0# ww1 ww2 w1 }) -}
+2f281944864006e29fa0fc97b9122a82
+  $fShowLayer2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Day13.$fShowLayer3) -}
+229cda27c9dd1e2d5ae806db8a238935
+  $fShowLayer3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("L "#) -}
+8a8a6019e733bbbbfa83b8b773b59a0c
+  $fShowLayer4 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 0#) -}
+410c219f0a01017fc4ca5bc0f6ff8cba
+  $fShowLayer_$cshow :: Day13.Layer -> GHC.Base.String
+  {- Arity: 1, Strictness: <S(SS),1*U(U,U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Day13.Layer) ->
+                 Day13.$fShowLayer_$cshowsPrec
+                   Day13.$fShowLayer4
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+410c219f0a01017fc4ca5bc0f6ff8cba
+  $fShowLayer_$cshowList :: [Day13.Layer] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Day13.Layer
+                   Day13.$fShowLayer1) -}
+410c219f0a01017fc4ca5bc0f6ff8cba
+  $fShowLayer_$cshowsPrec ::
+    GHC.Types.Int -> Day13.Layer -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S(S),1*U(U)><S(SS),1*U(U,U)><L,U>,
+     Inline: [0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Day13.Layer)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 case w1 of ww2 { Day13.L ww3 ww4 ->
+                 Day13.$w$cshowsPrec ww1 ww3 ww4 w2 } }) -}
+6f61f3e0d48a1a0bb59f28e3f55acf99
+  $tc'L :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13972218033767569859##
+                   11492645988582405945##
+                   Day13.$trModule
+                   Day13.$tc'L2
+                   0#
+                   Day13.$tc'L1) -}
+7faae992701014d6a9d47ca18110754b
+  $tc'L1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+b50657ee6f2b8475088adbb9f7f14d37
+  $tc'L2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day13.$tc'L3) -}
+c64c79fed1abb5b49712eac22b2e59e6
+  $tc'L3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'L"#) -}
+c16d7f6499dcaf38b4981f220edf87ab
+  $tcLayer :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   7027145602577146293##
+                   14184053665740664928##
+                   Day13.$trModule
+                   Day13.$tcLayer1
+                   0#
+                   GHC.Types.krep$*) -}
+82e597be1e89b94d42892fa0626f974d
+  $tcLayer1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day13.$tcLayer2) -}
+7f30194c8f7b6f863be69af0b505cf5f
+  $tcLayer2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Layer"#) -}
+9f9d06e38b9b74bbdcdce213d3250090
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Day13.$trModule3 Day13.$trModule1) -}
+ce496dc7dd45558bf178ad084c5d0304
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day13.$trModule2) -}
+062df8e3736e3149869fb62661997b84
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Day13"#) -}
+4d4370b822e4a34c4adcf8e59fde2614
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Day13.$trModule4) -}
+451018e37ad76a7275ce88613a11c1fc
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("main"#) -}
+3d31ba9c2a0e22fa4bbcf5bb673a7a70
+  $w$cshowsPrec ::
+    GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Prim.Int#
+    -> GHC.Base.String
+    -> GHC.Base.String
+  {- Arity: 4, Strictness: <S,U><L,U><L,U><L,U>, Inline: [0],
+     Unfolding: (\ (ww :: GHC.Prim.Int#)
+                   (ww1 :: GHC.Prim.Int#)
+                   (ww2 :: GHC.Prim.Int#)
+                   (w :: GHC.Base.String) ->
+                 let {
+                   g :: GHC.Base.String -> GHC.Base.String
+                     {- Arity: 1, Strictness: <L,U> -}
+                   = \ (x :: GHC.Base.String)[OneShot] ->
+                     case GHC.Show.$wshowSignedInt
+                            11#
+                            ww1
+                            (GHC.Types.:
+                               @ GHC.Types.Char
+                               GHC.Show.showSpace1
+                               (case GHC.Show.$wshowSignedInt 11# ww2 x of ww4 { (#,#) ww5 ww6 ->
+                                GHC.Types.: @ GHC.Types.Char ww5 ww6 })) of ww4 { (#,#) ww5 ww6 ->
+                     GHC.Types.: @ GHC.Types.Char ww5 ww6 }
+                 } in
+                 case GHC.Prim.tagToEnum#
+                        @ GHC.Types.Bool
+                        (GHC.Prim.>=# ww 11#) of wild {
+                   GHC.Types.False
+                   -> GHC.Base.++ @ GHC.Types.Char Day13.$fShowLayer2 (g w)
+                   GHC.Types.True
+                   -> GHC.Types.:
+                        @ GHC.Types.Char
+                        GHC.Show.$fShow(,)4
+                        (GHC.Base.++
+                           @ GHC.Types.Char
+                           Day13.$fShowLayer2
+                           (g (GHC.Types.: @ GHC.Types.Char GHC.Show.$fShow(,)2 w))) }) -}
+09a170284cad417fc4cd02142436a789
+  $wf :: GHC.Base.String -> (# GHC.Prim.Int#, GHC.Prim.Int# #)
+  {- Arity: 1, Strictness: <L,1*U>, Inline: [0],
+     Unfolding: (\ (w :: GHC.Base.String) ->
+                 let {
+                   x :: [[GHC.Types.Char]] = Data.OldList.words w
+                 } in
+                 case Text.Read.readEither8
+                        @ Day13.Depth
+                        (Text.ParserCombinators.ReadP.run
+                           @ Day13.Depth
+                           Day13.answer9
+                           (case x of wild {
+                              [] -> case GHC.List.badHead ret_ty GHC.Base.String of {}
+                              : x1 ds1
+                              -> GHC.List.takeWhile
+                                   @ GHC.Types.Char
+                                   Day13.answer8
+                                   x1 })) of wild {
+                   []
+                   -> case Day13.answer7
+                      ret_ty (# GHC.Prim.Int#, GHC.Prim.Int# #)
+                      of {}
+                   : x1 ds
+                   -> case ds of wild1 {
+                        []
+                        -> case x1 of dt { GHC.Types.I# dt1 ->
+                           case Text.Read.readEither8
+                                  @ Day13.Range
+                                  (Text.ParserCombinators.ReadP.run
+                                     @ Day13.Range
+                                     Day13.answer9
+                                     (GHC.List.$w!! @ GHC.Base.String x 1#)) of wild2 {
+                             []
+                             -> case Day13.answer7
+                                ret_ty (# GHC.Prim.Int#, GHC.Prim.Int# #)
+                                of {}
+                             : x2 ds1
+                             -> case ds1 of wild3 {
+                                  [] -> case x2 of dt2 { GHC.Types.I# dt3 -> (# dt1, dt3 #) }
+                                  : ipv ipv1
+                                  -> case Day13.answer6
+                                     ret_ty (# GHC.Prim.Int#, GHC.Prim.Int# #)
+                                     of {} } } }
+                        : ipv ipv1
+                        -> case Day13.answer6
+                           ret_ty (# GHC.Prim.Int#, GHC.Prim.Int# #)
+                           of {} } }) -}
+fab1565dedde93ac253410a45414c7e2
+  $wgo ::
+    [(Day13.Depth, Day13.Depth)] -> GHC.Prim.Int# -> GHC.Types.Int
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,U>m,
+     Inline: [0] -}
+7ea53eaa4f6d5cf232ed12c6eb441161
+  $wgo1 :: GHC.Prim.Int# -> Day13.Firewall -> GHC.Prim.Int#
+  {- Arity: 2, Strictness: <S,U><S,U>, Inline: [0] -}
+e54719031db12982cc4926bec286bcc0
+  type Delay = GHC.Types.Int
+c799fd38e2aa87c71ce940cf81278473
+  type Depth = GHC.Types.Int
+2ad689aa3bb3e25eb3543670c5cf335c
+  type Firewall = [Day13.Layer]
+410c219f0a01017fc4ca5bc0f6ff8cba
+  data Layer = L {-# UNPACK #-}Day13.Depth {-# UNPACK #-}Day13.Range
+464d815def95c5e4f1bbc4c43b024717
+  type Range = GHC.Types.Int
+abfb116bc44099fc499843a39f343015
+  answer1 :: GHC.Types.IO GHC.Types.Int
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Day13.answer4 `cast` (Sym (GHC.Types.N:IO[0] <GHC.Types.Int>_R)) -}
+f2951d957de8ebda592fd7171b934803
+  answer10 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Day13.answer11) -}
+19d7349218db25555bdb6c8ca96371cd
+  answer11 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("input/day13.txt"#) -}
+49c173a868d293b7a007e752edd0aff9
+  answer12 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Types.Int #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case GHC.IO.Handle.FD.openFile1
+                        Day13.answer10
+                        GHC.IO.IOMode.ReadMode
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.Text.hGetContents1
+                        ipv1
+                        ipv of ds { (#,#) ipv2 ipv3 ->
+                 (# ipv2,
+                    case Day13.$wgo1
+                           1#
+                           (GHC.Base.map
+                              @ [GHC.Types.Char]
+                              @ Day13.Layer
+                              Day13.answer5
+                              (Data.OldList.lines ipv3)) of ww { DEFAULT ->
+                    GHC.Types.I# ww } #) } }) -}
+5acd08510615d904c95b4e4b1d904d59
+  answer1_go ::
+    [(Day13.Depth, Day13.Range)]
+    -> [Day13.Layer] -> [(Day13.Depth, Day13.Range)]
+  {- Arity: 2, Strictness: <L,U><S,1*U> -}
+581c0ee1ea3ff7391efb2b8e61ff11fa
+  answer2 :: GHC.Types.IO GHC.Types.Int
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Day13.answer12
+                  `cast`
+                (Sym (GHC.Types.N:IO[0] <GHC.Types.Int>_R)) -}
+7237fa55c12bf75d7b2e485c9a54751f
+  answer4 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, GHC.Types.Int #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case GHC.IO.Handle.FD.openFile1
+                        Day13.answer10
+                        GHC.IO.IOMode.ReadMode
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case GHC.IO.Handle.Text.hGetContents1
+                        ipv1
+                        ipv of ds { (#,#) ipv2 ipv3 ->
+                 (# ipv2,
+                    Day13.$wgo
+                      (Day13.answer1_go
+                         (GHC.Types.[] @ (Day13.Depth, Day13.Range))
+                         (GHC.Base.map
+                            @ [GHC.Types.Char]
+                            @ Day13.Layer
+                            Day13.answer5
+                            (Data.OldList.lines ipv3)))
+                      0# #) } }) -}
+d924d4f86c286a19f68675dd7026292f
+  answer5 :: GHC.Base.String -> Day13.Layer
+  {- Arity: 1, Strictness: <L,1*U>m, Inline: [0],
+     Unfolding: InlineRule (1, True, False)
+                (\ (w :: GHC.Base.String) ->
+                 case Day13.$wf w of ww { (#,#) ww1 ww2 -> Day13.L ww1 ww2 }) -}
+b5383ff899bdd45382c857504fafbf20
+  answer6 :: Day13.Range
+  {- Strictness: x -}
+853a9ba83eaa57319ad9df72a1e0e236
+  answer7 :: Day13.Depth
+  {- Strictness: x -}
+3cb958136df68ec6f220c9ff0e033808
+  answer8 :: GHC.Types.Char -> GHC.Types.Bool
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(S),1*U(1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: GHC.Types.Char) ->
+                 case ds of wild { GHC.Types.C# x ->
+                 case x of wild1 {
+                   DEFAULT -> GHC.Types.True ':'# -> GHC.Types.False } }) -}
+18315bd46acc4aa2ac531dbed2bf9f60
+  answer9 :: Text.ParserCombinators.ReadP.P Day13.Depth
+  {- Unfolding: (GHC.Read.$fReadInt_$sreadNumber
+                   GHC.Read.$fReadInt2
+                   Text.ParserCombinators.ReadPrec.minPrec
+                   @ Day13.Depth
+                   (Text.Read.readEither7 @ Day13.Depth)) -}
+instance [safe] GHC.Show.Show [Day13.Layer] = Day13.$fShowLayer
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
